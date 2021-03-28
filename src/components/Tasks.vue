@@ -7,7 +7,8 @@
           <th>Nombre</th>
           <th>Categorias</th>
           <th>Estado</th>
-          <th>Horas</th>
+          <th class="text-center">Activa</th>
+          <th class="text-center">Horas</th>
           <th>Acciones</th>
         </tr>
       </thead>
@@ -16,7 +17,8 @@
           <td>{{ task.name }}</td>
           <td>{{ task.languages.join(', ') }}</td>
           <td>{{ task.state === "urgent" ? "Urgente" : "Normal" }}</td>
-          <td>{{ task.hours }}</td>
+          <td class="text-center">{{ task.active ? "Si" : "No" }}</td>
+          <td class="text-center">{{ task.hours }}</td>
           <td>
             <router-link
               class="btn btn-warning mr-2"
